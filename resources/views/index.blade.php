@@ -9,16 +9,7 @@
 </head>
 <body>
     <main>
-        <header>
-            <img src="Daniel de la Corte" alt="">
-            <p><strong>Daniel de la Corte</strong></p>
-            <div>
-                <button @class(['button'])>Button 1</button>
-                <button @class(['button'])>Button 2</button>
-                <button @class(['button'])>Button 3</button>
-                <button @class(['button'])>Button 4</button>
-            </div>
-        </header>
+        @include('header')
 
         <div @class(['descripcio'])>
             <p>Hola, mi nombre es Daniel</p>
