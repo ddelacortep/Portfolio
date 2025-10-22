@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER - Mobile First */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    background-color: var(--light-bg);
+    gap: 1rem;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+header div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* TABLET - 768px */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-md);
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+        order: 1;
+    }
+
+    header p {
+        order: 2;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+
+    header div {
+        order: 3;
+        justify-content: flex-end;
+    }
+}
+
+/* DESKTOP - 1024px */
+@media (min-width: 1024px) {
+    header {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+}
