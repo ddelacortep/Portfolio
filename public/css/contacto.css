@@ -61,6 +61,19 @@ main {
 
 .content-wrapper {
     flex: 1;
+    padding: 0 var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: var(--spacing-lg);
+}
+
+.contacto-text {
+    margin-bottom: var(--spacing-lg);
 }
 
 /* ALERTS */
@@ -205,6 +218,38 @@ main > p,
 
 /* DESKTOP - 1024px */
 @media (min-width: 1024px) {
+    .content-wrapper {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .contacto-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+        align-items: start;
+        margin-top: var(--spacing-lg);
+    }
+
+    .contacto-text h2 {
+        text-align: left;
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    .contacto-text p {
+        text-align: left;
+        font-size: 1.1rem;
+        margin: 0 0 1.5rem 0;
+        max-width: none;
+        padding: 0;
+    }
+
+    .formulario {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
     main h2,
     .content-wrapper h2 {
         font-size: 3.5rem;

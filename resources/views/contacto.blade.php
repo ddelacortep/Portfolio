@@ -36,15 +36,26 @@
                 </div>
             @endif
 
-            <h2>Contacta conmigo</h2>
+            <div class="contacto-container">
+                <div class="contacto-text">
+                    <h2>Contacta conmigo</h2>
 
-            <p>Si tienes alguna pregunta o deseas más información, no dudes en contactarme a través de mis redes 
-                sociales o enviando un correo electrónico rellenando este formulario.</p>
+                    <p>Si estás buscando sumar talento a tu equipo, tienes una vacante que podría encajar 
+                        conmigo o simplemente quieres conocer más sobre mi experiencia y habilidades, 
+                        estaré encantado de conversar contigo.</p>
+                    
+                    <p>Puedes contactarme a través del formulario de esta página, por LinkedIn o redes sociales. 
+                        Estoy abierto a nuevas oportunidades laborales y respondo a todos los mensajes.
+                        ¡Espero tu contacto!</p>
+                </div>
 
-            @include('form')
+                <div class="contacto-form">
+                    @include('form')
+                </div>
+            </div>
         </div>
-
-        @include('footer')
     </main>
+
+    @include('footer')
 </body>
 </html>

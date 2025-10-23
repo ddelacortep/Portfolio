@@ -8,6 +8,8 @@ footer {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    margin-top: var(--spacing-lg);
 }
 
 footer .social {
@@ -32,8 +34,14 @@ footer .social a {
 }
 
 footer .social a:hover {
-    color: var(--white);
-    text-decoration: underline;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Hover específico para modo oscuro */
+html[data-theme="dark"] footer .social a:hover {
+    color: #195e93;
+    text-decoration: none;
 }
 
 /* TABLET - 768px */

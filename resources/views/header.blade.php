@@ -1,7 +1,7 @@
 <header>
     <div class="header-container">
         <div class="header-left">
-            <img src="Daniel de la Corte" alt="Daniel de la Corte">
+            <img src="{{ asset('Portfolio.icons/ppdani.jpeg') }}" alt="Daniel de la Corte">
             <p><strong>Daniel de la Corte</strong></p>
             <button class="theme-toggle" aria-label="Cambiar tema">
                 <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
