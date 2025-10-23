@@ -14,33 +14,22 @@
         @include('header')
 
         <div @class(['descripcio'])>
-            <p>Hola, mi nombre es Daniel</p>
-            <h1><strong>Soy tecnico en desarrollo de aplicaciones web</strong></h1>
+            <p><strong>HOLA, MI NOMBRE ES DANIEL</strong></p>
+            <h1><strong>Soy Desarrollador Web.</strong></h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Soy desarrollador web full stack especializado en crear soluciones digitales eficientes y 
+                escalables. Trabajo con PHP, JavaScript, Python, Laravel y frameworks 
+                modernos como Tailwind y Bootstrap, aplicando metodologías ágiles y buenas 
+                prácticas de desarrollo. <br><br> He completado más de 12 proyectos, incluyendo colaboraciones 
+                con empresas reales, abarcando desde el diseño UI/UX hasta la implementación backend, 
+                optimización SEO y gestión de bases de datos. Mi experiencia en atención al cliente 
+                me ha dado una visión clara de cómo traducir necesidades de negocio en soluciones 
+                técnicas efectivas.
             </p>
         </div>
 
         <section @class(['projectes'])>
-            <div @class(['projecte'])>
-                <img src="project1.jpg" alt="Project 1">
-                <h2>Project 1</h2>
-                <p>Descripción del proyecto 1.</p>
-            </div>
-            <div @class(['projecte'])>
-                <img src="project2.jpg" alt="Project 2">
-                <h2>Project 2</h2>
-                <p>Descripción del proyecto 2.</p>
-            </div>
-            <div @class(['projecte'])>
-                <img src="project3.jpg" alt="Project 3">
-                <h2>Project 3</h2>
-                <p>Descripción del proyecto 3.</p>
-            </div>
+            <p>WORK IN PROGRESS...</p>
         </section>
 
         @include('footer')

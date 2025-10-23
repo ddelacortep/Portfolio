@@ -69,11 +69,30 @@ main {
 .contacto-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
 }
 
 .contacto-text {
-    margin-bottom: var(--spacing-lg);
+    flex: 1;
+    padding-right: var(--spacing-md);
+}
+
+.contacto-text h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.contacto-text p {
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* ALERTS */
@@ -129,9 +148,8 @@ main > p,
 
 /* FORMULARIO */
 .formulario {
-    max-width: 600px;
-    margin: 0 auto var(--spacing-lg);
-    padding: 0 var(--spacing-sm);
+    flex: 1;
+    max-width: 500px;
 }
 
 .formulario form {
