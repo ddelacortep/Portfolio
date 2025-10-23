@@ -1,0 +1,234 @@
+/* HEADER STYLES - Aplicable a todas las páginas */
+
+/* HEADER - Mobile First */
+header {
+    padding: var(--spacing-md) var(--spacing-sm);
+    background-color: var(--light-bg);
+    transition: background-color 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+header p {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+/* Botón de tema (modo claro/oscuro) */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: rotate(20deg);
+}
+
+.theme-toggle:hover svg {
+    stroke: var(--white);
+}
+
+.theme-toggle svg {
+    stroke: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* Mostrar/ocultar iconos según el tema */
+.sun-icon {
+    display: none;
+}
+
+.moon-icon {
+    display: block;
+}
+
+html[data-theme="dark"] .sun-icon {
+    display: block;
+}
+
+html[data-theme="dark"] .moon-icon {
+    display: none;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Menú navegación - Mobile */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    gap: 1rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.button {
+    padding: 0.5rem 0.8rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* TABLET - 768px */
+@media (min-width: 768px) {
+    header {
+        padding: var(--spacing-md);
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+
+    /* Ocultar botón hamburguesa en tablet/desktop */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Mostrar menú horizontal en tablet/desktop */
+    .nav-menu {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        flex-direction: row;
+        padding: 0;
+        gap: 0.5rem;
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* DESKTOP - 1024px */
+@media (min-width: 1024px) {
+    header {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    header p {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    .nav-menu {
+        gap: 0.8rem;
+    }
+
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        margin-left: 1rem;
+    }
+}
