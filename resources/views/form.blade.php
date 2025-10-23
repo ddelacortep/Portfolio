@@ -1,0 +1,14 @@
+<div class="formulario">
+    <form action="{{ route('submitForm') }}" method="POST">
+        @csrf
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
