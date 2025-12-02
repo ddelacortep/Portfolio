@@ -14,7 +14,7 @@
         @include('header')
 
         <section class="habilidades-section">
-            <h1>Mis Habilidades 23</h1>
+            <h1>Mis Habilidades</h1>
             <!-- El contenido se cargará dinámicamente desde habilidades.json -->
         </section>
 
