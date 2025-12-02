@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Cargar habilidades desde el JSON
-    await cargarHabilidades();
+    cargarHabilidades();
     
     // Inicializar efectos después de cargar las habilidades
     inicializarEfectos();
