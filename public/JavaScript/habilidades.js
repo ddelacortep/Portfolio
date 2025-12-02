@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function cargarHabilidades() {
     try {
-        const response = await fetch('/data/habilidades.json');
+        const response = await fetch(window.location.origin + '/data/habilidades.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         
         const habilidadesSection = document.querySelector('.habilidades-section');
