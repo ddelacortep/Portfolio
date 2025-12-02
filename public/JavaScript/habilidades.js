@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function cargarHabilidades() {
+    // Obtener la URL base de los assets desde el meta tag
+    const assetUrl = document.querySelector('meta[name="asset-url"]').getAttribute('content');
+
     try {
         const data = {
             "categorias": [
@@ -182,7 +185,7 @@ function cargarHabilidades() {
                 skillImage.className = 'skill-image';
                 
                 const img = document.createElement('img');
-                img.src = habilidad.icono;
+                img.src = `${assetUrl}/${habilidad.icono}`;
                 img.alt = habilidad.nombre;
                 
                 const skillName = document.createElement('p');
