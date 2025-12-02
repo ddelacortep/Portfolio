@@ -6,14 +6,154 @@ document.addEventListener('DOMContentLoaded', async () => {
     inicializarEfectos();
 });
 
-async function cargarHabilidades() {
+function cargarHabilidades() {
     try {
-        const response = await fetch('data/habilidades.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        
+        const data = {
+            "categorias": [
+            {
+                "nombre": "Lenguajes de Programación",
+                "habilidades": [
+                    {
+                        "id": "html",
+                        "nombre": "HTML5",
+                        "icono": "Portfolio.icons/html-5.png"
+                    },
+                    {
+                        "id": "css",
+                        "nombre": "CSS3",
+                        "icono": "Portfolio.icons/css-3.png"
+                    },
+                    {
+                        "id": "javascript",
+                        "nombre": "JavaScript",
+                        "icono": "Portfolio.icons/js.png"
+                    },
+                    {
+                        "id": "python",
+                        "nombre": "Python",
+                        "icono": "Portfolio.icons/python.png"
+                    },
+                    {
+                        "id": "java",
+                        "nombre": "Java",
+                        "icono": "Portfolio.icons/java.png"
+                    },
+                    {
+                        "id": "sql",
+                        "nombre": "SQL",
+                        "icono": "Portfolio.icons/sql.png"
+                    },
+                    {
+                        "id": "php",
+                        "nombre": "PHP",
+                        "icono": "Portfolio.icons/php.png"
+                    }
+                ]
+            },
+                {
+                    "nombre": "Frameworks",
+                    "habilidades": [
+                    {
+                        "id": "laravel",
+                        "nombre": "Laravel",
+                        "icono": "Portfolio.icons/laravel.svg"
+                    },
+                    {
+                        "id": "vue",
+                        "nombre": "Vue.js",
+                        "icono": "Portfolio.icons/vue.svg"
+                    },
+                    {
+                        "id": "bootstrap",
+                        "nombre": "Bootstrap",
+                        "icono": "Portfolio.icons/bootstrap.svg"
+                    },
+                    {
+                        "id": "wordpress",
+                        "nombre": "WordPress",
+                        "icono": "Portfolio.icons/wordpress.svg"
+                    },
+                    {
+                        "id": "tailwind",
+                        "nombre": "Tailwind CSS",
+                        "icono": "Portfolio.icons/tailwind.png"
+                    }
+                
+                ]
+            },
+                {
+                    "nombre": "Herramientas",
+                    "habilidades": [
+                    {
+                        "id": "git",
+                        "nombre": "Git",
+                        "icono": "Portfolio.icons/git.png"
+                    },
+                    {
+                        "id": "vscode",
+                        "nombre": "VS Code",
+                        "icono": "Portfolio.icons/vs.png"
+                    },
+                    {
+                        "id": "github",
+                        "nombre": "GitHub",
+                        "icono": "Portfolio.icons/github.svg"
+                    },
+                    {
+                        "id": "docker",
+                        "nombre": "Docker",
+                        "icono": "Portfolio.icons/docker.svg"
+                    },
+                    {
+                        "id": "figma",
+                        "nombre": "Figma",
+                        "icono": "Portfolio.icons/figma.svg"
+                    },
+                    {
+                        "id": "mysql",
+                        "nombre": "MySQL",
+                        "icono": "Portfolio.icons/mysql.svg"
+                    },
+                    {
+                        "id": "intellij",
+                        "nombre": "IntelliJ",
+                        "icono": "Portfolio.icons/intellij.svg"
+                    },
+                    {
+                        "id": "mongodb",
+                        "nombre": "MongoDB",
+                        "icono": "Portfolio.icons/mongodb.png"
+                    },
+                    {
+                        "id": "linux",
+                        "nombre": "Linux",
+                        "icono": "Portfolio.icons/linux.png"
+                    }
+                ]
+            },
+                {
+                    "nombre": "Metodologías",
+                    "habilidades": [
+                    {
+                        "id": "scrum",
+                        "nombre": "Scrum",
+                        "icono": "Portfolio.icons/scrum.svg"
+                    },
+                    {
+                        "id": "express",
+                        "nombre": "Proyectos Express",
+                        "icono": "Portfolio.icons/express.png"
+                    },
+                    {
+                        "id": "ajustes",
+                        "nombre": "Desarrollo Ágil",
+                        "icono": "Portfolio.icons/ajustes.png"
+                    }
+                ]
+                }
+            ]
+        };
+
         const habilidadesSection = document.querySelector('.habilidades-section');
         
         // Limpiar contenido existente (excepto el título)
@@ -42,7 +182,7 @@ async function cargarHabilidades() {
                 skillImage.className = 'skill-image';
                 
                 const img = document.createElement('img');
-                img.src = `/${habilidad.icono}`;
+                img.src = habilidad.icono;
                 img.alt = habilidad.nombre;
                 
                 const skillName = document.createElement('p');
